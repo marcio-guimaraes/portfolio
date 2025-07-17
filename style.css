@@ -193,3 +193,11 @@ header .contact-info {
         color: white !important;
     }
 }
+
+/*Modo paisagem*/
+@media print {
+  @page {
+    size: A4 landscape;
+  }
+}
+
