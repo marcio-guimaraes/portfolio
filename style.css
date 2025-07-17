@@ -1,0 +1,195 @@
+:root {
+    --dark-bg: #2d3748;
+    --light-text: #f7fafc;
+    --dark-text: #2d3748;
+    --primary-color: #4A90E2;
+    --light-gray: #e2e8f0;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: var(--dark-text);
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 30px auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.sidebar {
+    background-color: var(--dark-bg);
+    color: var(--light-text);
+    padding: 30px;
+    width: 35%;
+    box-sizing: border-box;
+}
+
+.sidebar .profile-pic {
+    width: 150px;
+    height: 150px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 auto 20px auto;
+    display: block;
+    border: 4px solid var(--primary-color);
+    text-align: center;
+    line-height: 142px;
+    font-size: 12px;
+    color: #555;
+}
+
+.sidebar h2 {
+    border-bottom: 2px solid var(--primary-color);
+    padding-bottom: 5px;
+    margin-top: 30px;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.sidebar p, .sidebar li {
+    font-size: 0.9em;
+}
+
+.sidebar strong {
+    display: block;
+    margin-top: 10px;
+    color: var(--light-gray);
+}
+
+.sidebar a {
+    color: var(--primary-color);
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.sidebar a:hover {
+    text-decoration: underline;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.main-content {
+    padding: 30px;
+    width: 65%;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    color: var(--dark-text);
+    text-transform: uppercase;
+}
+
+header .subtitle {
+    margin: 0;
+    font-size: 1.2em;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+header .contact-info {
+    font-size: 0.9em;
+    margin-top: 10px;
+    color: #555;
+}
+
+.section h2 {
+    font-size: 1.5em;
+    color: var(--dark-text);
+    border-bottom: 2px solid var(--light-gray);
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.job, .education {
+    margin-bottom: 25px;
+}
+
+.job h3, .education h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: var(--primary-color);
+}
+
+.job .details, .education .details {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.job ul, .education ul {
+    padding-left: 20px;
+    margin: 0;
+}
+
+.job li, .education li {
+    margin-bottom: 5px;
+}
+
+.save-button-wrapper {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.save-button-wrapper button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.save-button-wrapper button:hover {
+    background-color: #357ABD;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: 0;
+        border-radius: 0;
+    }
+    .sidebar, .main-content {
+        width: 100%;
+    }
+}
+
+/* Esconde o botão na impressão */
+@media print {
+    .save-button-wrapper {
+        display: none;
+    }
+
+    body {
+        -webkit-print-color-adjust: exact !important;
+        print-color-adjust: exact !important;
+    }
+
+    .sidebar {
+        background-color: #2d3748 !important;
+        color: white !important;
+    }
+}
